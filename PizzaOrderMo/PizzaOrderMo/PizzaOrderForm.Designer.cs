@@ -57,6 +57,7 @@
             this.btnCalculate.TabIndex = 0;
             this.btnCalculate.Text = "Calculate";
             this.btnCalculate.UseVisualStyleBackColor = true;
+            this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
             // 
             // pictureBox1
             // 
@@ -124,7 +125,7 @@
             // 
             this.nudToppingNum.Location = new System.Drawing.Point(838, 156);
             this.nudToppingNum.Maximum = new decimal(new int[] {
-            5,
+            4,
             0,
             0,
             0});
@@ -210,6 +211,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "frmPizzaOrder";
             this.Text = "Pizza Order By Mohammed";
+            this.Load += new System.EventHandler(this.frmPizzaOrder_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSizeNum)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudToppingNum)).EndInit();

@@ -1,0 +1,9 @@
+N:\StuShare\Semester 1 - Fall 2018\ICS3U Programming\Alnajeh, Mohammed (s450524)\Assignments\PizzaOrderMo\PizzaOrderMo\bin\Debug\PizzaOrderMo.exe.config
+N:\StuShare\Semester 1 - Fall 2018\ICS3U Programming\Alnajeh, Mohammed (s450524)\Assignments\PizzaOrderMo\PizzaOrderMo\bin\Debug\PizzaOrderMo.exe
+N:\StuShare\Semester 1 - Fall 2018\ICS3U Programming\Alnajeh, Mohammed (s450524)\Assignments\PizzaOrderMo\PizzaOrderMo\bin\Debug\PizzaOrderMo.pdb
+N:\StuShare\Semester 1 - Fall 2018\ICS3U Programming\Alnajeh, Mohammed (s450524)\Assignments\PizzaOrderMo\PizzaOrderMo\obj\Debug\PizzaOrderMo.csprojResolveAssemblyReference.cache
+N:\StuShare\Semester 1 - Fall 2018\ICS3U Programming\Alnajeh, Mohammed (s450524)\Assignments\PizzaOrderMo\PizzaOrderMo\obj\Debug\PizzaOrderMo.frmPizzaOrder.resources
+N:\StuShare\Semester 1 - Fall 2018\ICS3U Programming\Alnajeh, Mohammed (s450524)\Assignments\PizzaOrderMo\PizzaOrderMo\obj\Debug\PizzaOrderMo.Properties.Resources.resources
+N:\StuShare\Semester 1 - Fall 2018\ICS3U Programming\Alnajeh, Mohammed (s450524)\Assignments\PizzaOrderMo\PizzaOrderMo\obj\Debug\PizzaOrderMo.csproj.GenerateResource.Cache
+N:\StuShare\Semester 1 - Fall 2018\ICS3U Programming\Alnajeh, Mohammed (s450524)\Assignments\PizzaOrderMo\PizzaOrderMo\obj\Debug\PizzaOrderMo.exe
+N:\StuShare\Semester 1 - Fall 2018\ICS3U Programming\Alnajeh, Mohammed (s450524)\Assignments\PizzaOrderMo\PizzaOrderMo\obj\Debug\PizzaOrderMo.pdb
