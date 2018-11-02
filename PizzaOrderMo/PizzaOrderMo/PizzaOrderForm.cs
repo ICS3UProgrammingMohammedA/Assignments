@@ -22,55 +22,50 @@ namespace PizzaOrderMo
             //declare local variables
             double subtotal, tax, total, sizeSelections, toppingSelection;
 
-
+            // Declaring constants
             const double XLARGE = 2;
             const double LARGE = 1;
+            const double FIRSTTOPPING = 1;
+            const double SECONDTOPPING = 2;
+            const double THIRDTOPPING = 3;
+            const double FOURTHTOPPING = 4;
             const double LARGEPRICE = 9.99;
             const double XLARGEPRICE = 12.99;
-            const double FIRSTTOPPING = 0.75;
-            const double SECONDTOPPING = 1.35;
-            const double THIRDTOPPING = 2.15;
-            const double FOURTHTOPPING = 2.75;
+            const double FIRSTTOPPINGPRICE = 0.75;
+            const double SECONDTOPPINGPRICE = 1.35;
+            const double THIRDTOPPINGPRICE = 2.15;
+            const double FOURTHTOPPINGPRICE = 2.75;
 
-
-
-
+            // getting the number for large or xlarge pizza from the user
             sizeSelections = (double)nudSizeNum.Value;
             toppingSelection = (double)nudToppingNum.Value;
 
 
-            subtotal = sizeSelections + toppingSelection;
-            total = subtotal * 0.13 + subtotal;
-            tax = subtotal * 0.13;
-
-            lblSubtotalAnswer.Text = string.Format("${0:0.00}", subtotal);
-            lblHSTAnswer.Text = string.Format("${0:0.00}", tax);
-            lblTotalAnswer.Text = string.Format("${0:0.00}", total);
-
-
+            // if the size selection is 1 which is large
             if (sizeSelections == LARGE)
             {
+                //
                 if (toppingSelection == FIRSTTOPPING)
                 {
-                    subtotal = LARGEPRICE + FIRSTTOPPING;
+                    subtotal = LARGEPRICE + FIRSTTOPPINGPRICE;
                     total = subtotal * 0.13 + subtotal;
                     tax = subtotal * 0.13;
                 }
                 else if (toppingSelection == SECONDTOPPING)
                 {
-                    subtotal = LARGEPRICE + SECONDTOPPING;
+                    subtotal = LARGEPRICE + SECONDTOPPINGPRICE;
                     total = subtotal * 0.13 + subtotal;
                     tax = subtotal * 0.13;
                 }
                 else if (toppingSelection == THIRDTOPPING)
                 {
-                    subtotal = LARGEPRICE + THIRDTOPPING;
+                    subtotal = LARGEPRICE + THIRDTOPPINGPRICE;
                     total = subtotal * 0.13 + subtotal;
                     tax = subtotal * 0.13;
                 }
                 else if (toppingSelection == FOURTHTOPPING)
                 {
-                    subtotal = LARGEPRICE + FOURTHTOPPING;
+                    subtotal = LARGEPRICE + FOURTHTOPPINGPRICE;
                     total = subtotal * 0.13 + subtotal;
                     total = subtotal * 0.13;
                 }
@@ -78,36 +73,47 @@ namespace PizzaOrderMo
                 {
                     if (toppingSelection == FIRSTTOPPING)
                     {
-                        subtotal = XLARGEPRICE + FIRSTTOPPING;
+                        subtotal = XLARGEPRICE + FIRSTTOPPINGPRICE;
                         total = subtotal * 0.13 + subtotal;
-                    tax = subtotal * 0.13;
+                        tax = subtotal * 0.13;
                     }
                     
-                    }
+                }
                     else if (toppingSelection == SECONDTOPPING)
                     {
-                        subtotal = XLARGEPRICE + SECONDTOPPING;
+                        subtotal = XLARGEPRICE + SECONDTOPPINGPRICE;
                         total = subtotal * 0.13 + subtotal;
                         tax = subtotal * 0.13;
                     }
                     else if (toppingSelection == THIRDTOPPING)
                     {
-                        subtotal = XLARGEPRICE + THIRDTOPPING;
+                        subtotal = XLARGEPRICE + THIRDTOPPINGPRICE;
                         total = subtotal * 0.13 + subtotal;
                         tax = subtotal * 0.13;
                     }
                     else if (toppingSelection == FOURTHTOPPING)
                     {
-                    subtotal = XLARGEPRICE + FOURTHTOPPING;
-                    total = subtotal * 0.13 + subtotal;
-                    tax = subtotal * 0.13;
+                        subtotal = XLARGEPRICE + FOURTHTOPPINGPRICE;
+                        total = subtotal * 0.13 + subtotal;
+                        tax = subtotal * 0.13;
                     }
-                
+                //calculating the subtotal, total and tax
+                subtotal = sizeSelections + toppingSelection;
+                total = subtotal * 0.13 + subtotal;
+                tax = subtotal * 0.13;
 
+                //this code is to make the answer have the dollor sign
+                lblSubtotalAnswer.Text = string.Format("${0:0.00}", subtotal);
+                lblHSTAnswer.Text = string.Format("${0:0.00}", tax);
+                lblTotalAnswer.Text = string.Format("${0:0.00}", total);
 
-
-
-                
+                //this code is to show the hidden labels
+                lblSubtotal.Show();
+                lblTotal.Show();
+                lblHST.Show();
+                lblHSTAnswer.Show();
+                lblSubtotalAnswer.Show();
+                lblTotalAnswer.Show();
 
             }
 
@@ -115,12 +121,13 @@ namespace PizzaOrderMo
 
         private void frmPizzaOrder_Load(object sender, EventArgs e)
         {
-            lblSubtotal.Show();
-            lblTotal.Show();
-            lblHST.Show();
-            lblHSTAnswer.Show();
-            lblSubtotalAnswer.Show();
-            lblTotalAnswer.Show();
+           //this code is to hide the labels 
+            lblSubtotal.Hide();
+            lblTotal.Hide();
+            lblHST.Hide();
+            lblHSTAnswer.Hide();
+            lblSubtotalAnswer.Hide();
+            lblTotalAnswer.Hide();
         }
     }
 
