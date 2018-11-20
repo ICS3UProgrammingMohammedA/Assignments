@@ -1,4 +1,12 @@
-﻿using System;
+﻿/*
+ * Created by: Mohammed Alnajeh
+ * Created on: 2018-11-08
+ * Created for: ICS3U Programming
+ * Daily Assignment – Day #33 - Percentage Program
+ * This program calculates your pizza order
+*/
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,20 +23,23 @@ namespace PizzaOrderMo
         public frmPizzaOrder()
         {
             InitializeComponent();
+            
         }
 
         private void btnCalculate_Click(object sender, EventArgs e)
         {
             //declare local variables
-            double subtotal=0, tax=0, total=0, sizeSelections, toppingSelection;
+            double subtotal = 0, tax = 0, total = 0;
+            int sizeSelections , toppingSelection ;
+            
 
             // Declaring constants
-            const double XLARGE = 2;
-            const double LARGE = 1;
-            const double FIRSTTOPPING = 1;
-            const double SECONDTOPPING = 2;
-            const double THIRDTOPPING = 3;
-            const double FOURTHTOPPING = 4;
+             int LARGE = 1;
+             int XLARGE = 2;
+             int FIRSTTOPPING = 1;
+             int SECONDTOPPING = 2;
+             int THIRDTOPPING = 3;
+             int FOURTHTOPPING = 4;
             const double LARGEPRICE = 9.99;
             const double XLARGEPRICE = 12.99;
             const double FIRSTTOPPINGPRICE = 0.75;
@@ -36,17 +47,30 @@ namespace PizzaOrderMo
             const double THIRDTOPPINGPRICE = 2.15;
             const double FOURTHTOPPINGPRICE = 2.75;
 
+
+
             // getting the number for large or xlarge pizza from the user
-            sizeSelections = (double)nudSizeNum.Value;
+            sizeSelections = (int)nudSizeNum.Value;
 
             //getting the number for the toppings from the user
-            toppingSelection = (double)nudToppingNum.Value;
+            toppingSelection = (int)nudToppingNum.Value;
 
+
+            //this code is to show the hidden labels
+            lblSubtotal.Show();
+            lblTotal.Show();
+            lblHST.Show();
+            lblHSTAnswer.Show();
+            lblSubtotalAnswer.Show();
+            lblTotalAnswer.Show();
+
+
+            Console.WriteLine ("sizeSelections = " + sizeSelections);
+            Console.WriteLine("toppingSelection = " + toppingSelection);
 
             // if the size selection is 1 which is large
             if (sizeSelections == LARGE)
             {
-                //
                 if (toppingSelection == FIRSTTOPPING)
                 {
                     subtotal = LARGEPRICE + FIRSTTOPPINGPRICE;
@@ -99,34 +123,25 @@ namespace PizzaOrderMo
                     total = subtotal * 0.13 + subtotal;
                     tax = subtotal * 0.13;
                 }
-
             }
 
-            //calculating the subtotal, total and tax
-            subtotal = sizeSelections + toppingSelection;
-                total = subtotal * 0.13 + subtotal;
-                tax = subtotal * 0.13;
+
+              
 
                 //this code is to make the answer have the dollor sign
                 lblSubtotalAnswer.Text = string.Format("${0:0.00}", subtotal);
                 lblHSTAnswer.Text = string.Format("${0:0.00}", tax);
                 lblTotalAnswer.Text = string.Format("${0:0.00}", total);
 
-                //this code is to show the hidden labels
-                lblSubtotal.Show();
-                lblTotal.Show();
-                lblHST.Show();
-                lblHSTAnswer.Show();
-                lblSubtotalAnswer.Show();
-                lblTotalAnswer.Show();
 
-            }
+ }
 
-        }
+          
+
+  
 
         private void frmPizzaOrder_Load(object sender, EventArgs e)
         {
-           //this code is to hide the labels 
             lblSubtotal.Hide();
             lblTotal.Hide();
             lblHST.Hide();
@@ -134,10 +149,6 @@ namespace PizzaOrderMo
             lblSubtotalAnswer.Hide();
             lblTotalAnswer.Hide();
         }
-    
-
-        private void frmPizzaOrder_Load(object sender, EventArgs e)
-        {
-
-        }
     }
+
+}

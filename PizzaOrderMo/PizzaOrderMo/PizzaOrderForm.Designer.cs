@@ -98,9 +98,9 @@
             this.lblLarge.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLarge.Location = new System.Drawing.Point(453, 72);
             this.lblLarge.Name = "lblLarge";
-            this.lblLarge.Size = new System.Drawing.Size(156, 25);
+            this.lblLarge.Size = new System.Drawing.Size(162, 25);
             this.lblLarge.TabIndex = 4;
-            this.lblLarge.Text = "LargePizza = 1";
+            this.lblLarge.Text = "Large Pizza = 1";
             // 
             // lblXLarge
             // 
