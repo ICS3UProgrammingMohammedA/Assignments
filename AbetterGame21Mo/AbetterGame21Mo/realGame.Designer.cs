@@ -32,16 +32,21 @@
             this.btnPlayAgain = new System.Windows.Forms.Button();
             this.lblPlayer = new System.Windows.Forms.Label();
             this.lblDealer = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picDealerCard2 = new System.Windows.Forms.PictureBox();
+            this.picDealerCard1 = new System.Windows.Forms.PictureBox();
+            this.picPlayerCard2 = new System.Windows.Forms.PictureBox();
+            this.picPlayerCard3 = new System.Windows.Forms.PictureBox();
             this.btnStay = new System.Windows.Forms.Button();
             this.btnHit = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.btnStart = new System.Windows.Forms.Button();
+            this.picDealerCard3 = new System.Windows.Forms.PictureBox();
+            this.picPlayerCard1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picDealerCard2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picDealerCard1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picDealerCard3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnPlayAgain
@@ -76,42 +81,42 @@
             this.lblDealer.TabIndex = 2;
             this.lblDealer.Text = "Dealer";
             // 
-            // pictureBox4
+            // picDealerCard2
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(370, 186);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(122, 128);
-            this.pictureBox4.TabIndex = 6;
-            this.pictureBox4.TabStop = false;
+            this.picDealerCard2.Location = new System.Drawing.Point(310, 186);
+            this.picDealerCard2.Name = "picDealerCard2";
+            this.picDealerCard2.Size = new System.Drawing.Size(122, 128);
+            this.picDealerCard2.TabIndex = 6;
+            this.picDealerCard2.TabStop = false;
             // 
-            // pictureBox3
+            // picDealerCard1
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(156, 186);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(122, 128);
-            this.pictureBox3.TabIndex = 5;
-            this.pictureBox3.TabStop = false;
+            this.picDealerCard1.Location = new System.Drawing.Point(156, 186);
+            this.picDealerCard1.Name = "picDealerCard1";
+            this.picDealerCard1.Size = new System.Drawing.Size(122, 128);
+            this.picDealerCard1.TabIndex = 5;
+            this.picDealerCard1.TabStop = false;
             // 
-            // pictureBox2
+            // picPlayerCard2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(370, 25);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(122, 128);
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
+            this.picPlayerCard2.Location = new System.Drawing.Point(310, 25);
+            this.picPlayerCard2.Name = "picPlayerCard2";
+            this.picPlayerCard2.Size = new System.Drawing.Size(122, 128);
+            this.picPlayerCard2.TabIndex = 4;
+            this.picPlayerCard2.TabStop = false;
             // 
-            // pictureBox1
+            // picPlayerCard3
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(156, 25);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(122, 128);
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
+            this.picPlayerCard3.Location = new System.Drawing.Point(463, 25);
+            this.picPlayerCard3.Name = "picPlayerCard3";
+            this.picPlayerCard3.Size = new System.Drawing.Size(122, 128);
+            this.picPlayerCard3.TabIndex = 3;
+            this.picPlayerCard3.TabStop = false;
             // 
             // btnStay
             // 
             this.btnStay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStay.Location = new System.Drawing.Point(605, 72);
+            this.btnStay.Location = new System.Drawing.Point(731, 53);
             this.btnStay.Name = "btnStay";
             this.btnStay.Size = new System.Drawing.Size(83, 39);
             this.btnStay.TabIndex = 7;
@@ -121,12 +126,39 @@
             // btnHit
             // 
             this.btnHit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHit.Location = new System.Drawing.Point(605, 140);
+            this.btnHit.Location = new System.Drawing.Point(731, 140);
             this.btnHit.Name = "btnHit";
             this.btnHit.Size = new System.Drawing.Size(83, 39);
             this.btnHit.TabIndex = 8;
             this.btnHit.Text = "Hit";
             this.btnHit.UseVisualStyleBackColor = true;
+            this.btnHit.Click += new System.EventHandler(this.btnHit_Click);
+            // 
+            // btnStart
+            // 
+            this.btnStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStart.Location = new System.Drawing.Point(611, 85);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(114, 58);
+            this.btnStart.TabIndex = 9;
+            this.btnStart.Text = "Start";
+            this.btnStart.UseVisualStyleBackColor = true;
+            // 
+            // picDealerCard3
+            // 
+            this.picDealerCard3.Location = new System.Drawing.Point(477, 186);
+            this.picDealerCard3.Name = "picDealerCard3";
+            this.picDealerCard3.Size = new System.Drawing.Size(122, 128);
+            this.picDealerCard3.TabIndex = 10;
+            this.picDealerCard3.TabStop = false;
+            // 
+            // picPlayerCard1
+            // 
+            this.picPlayerCard1.Location = new System.Drawing.Point(156, 25);
+            this.picPlayerCard1.Name = "picPlayerCard1";
+            this.picPlayerCard1.Size = new System.Drawing.Size(122, 128);
+            this.picPlayerCard1.TabIndex = 11;
+            this.picPlayerCard1.TabStop = false;
             // 
             // realGame
             // 
@@ -134,22 +166,28 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(895, 536);
+            this.Controls.Add(this.picPlayerCard1);
+            this.Controls.Add(this.picDealerCard3);
+            this.Controls.Add(this.btnStart);
             this.Controls.Add(this.btnHit);
             this.Controls.Add(this.btnStay);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.picDealerCard2);
+            this.Controls.Add(this.picDealerCard1);
+            this.Controls.Add(this.picPlayerCard2);
+            this.Controls.Add(this.picPlayerCard3);
             this.Controls.Add(this.lblDealer);
             this.Controls.Add(this.lblPlayer);
             this.Controls.Add(this.btnPlayAgain);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "realGame";
             this.Text = "realGame";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Load += new System.EventHandler(this.realGame_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.picDealerCard2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picDealerCard1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picDealerCard3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -160,11 +198,14 @@
         private System.Windows.Forms.Button btnPlayAgain;
         private System.Windows.Forms.Label lblPlayer;
         private System.Windows.Forms.Label lblDealer;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox picPlayerCard3;
+        private System.Windows.Forms.PictureBox picPlayerCard2;
+        private System.Windows.Forms.PictureBox picDealerCard1;
+        private System.Windows.Forms.PictureBox picDealerCard2;
         private System.Windows.Forms.Button btnStay;
         private System.Windows.Forms.Button btnHit;
+        private System.Windows.Forms.Button btnStart;
+        private System.Windows.Forms.PictureBox picDealerCard3;
+        private System.Windows.Forms.PictureBox picPlayerCard1;
     }
 }
