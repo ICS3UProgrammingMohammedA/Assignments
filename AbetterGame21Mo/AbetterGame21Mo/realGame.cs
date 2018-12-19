@@ -18,6 +18,8 @@ namespace AbetterGame21Mo
         List<int> listCardValues = new List<int>();
         int hitcounter;
         Random cardIndexGen;
+        int cards = 0;
+        
 
         //sound player
         private SoundPlayer bgsoundPlayer = new SoundPlayer();
@@ -44,6 +46,7 @@ namespace AbetterGame21Mo
         {
             //declare local variables
             int card;
+            int cardValue = 0;
 
             card = cardIndexGen.Next(0, listCardImages.Count());
 
@@ -195,9 +198,44 @@ namespace AbetterGame21Mo
 
         private void btnHit_Click(object sender, EventArgs e)
         {
+            DealCard(ref this.picPlayerCard3);
+            DealCard(ref this.picDealerCard2);
             hitcounter++;
+            btnHit.Enabled = false;
+        }
 
-           
+        private int DealCard(ref PictureBox aPictureBox)
+        {
+            //declare local variables
+            int cardindex;
+            int cardValue;
+
+            //this is the length of the list
+            cardindex = cardIndexGen.Next(0, listCardImages.Count());
+
+            //this displays the cards and there values
+            cardValue = listCardValues[cardindex];
+            
+            // this removes the card from the deck
+            listCardImages.RemoveAt(cardindex);
+            listCardValues.RemoveAt(cardindex);
+
+            return cardValue;
+        }
+
+        private void btnStart_Click(object sender, EventArgs e)
+        {
+            {
+                DealCard(ref this.picDealerCard1);
+                DealCard(ref this.picPlayerCard1);
+                DealCard(ref this.picPlayerCard2);
+                btnStart.Hide();
+            }
+        }
+
+        private void btnStay_Click(object sender, EventArgs e)
+        {
+            //lblTotalPlayer = DealCard();
         }
     }
 }
